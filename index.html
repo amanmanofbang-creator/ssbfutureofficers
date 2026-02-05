@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSB Future Officers - Premium SSB Preparation Materials</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #334155;
+      }
+      .text-accent {
+        color: #1e40af;
+      }
+      .bg-accent {
+        background-color: #1e40af;
+      }
+      .border-accent {
+        border-color: #1e40af;
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+      }
+      .section-header::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(90deg, #1e40af, #3b82f6);
+        margin-top: 8px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #1e40af, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero-gradient {
+        background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 50%, #e0f2fe 100%);
+      }
+      .testimonial-bg {
+        background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+      }
+      .logo-badge {
+        background: linear-gradient(135deg, #1e40af, #3b82f6);
+        color: white;
+      }
+      .military-gradient {
+        background: linear-gradient(135deg, #1e3a8a, #1e40af);
+      }
+      .feature-card {
+        border-left: 4px solid #1e40af;
+      }
+      /* Carousel specific styles */
+      .carousel-slide {
+        display: none;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      .carousel-slide.active {
+        display: block;
+        opacity: 1;
+      }
+      /* Spinner Animation */
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .spinner {
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top: 4px solid #ffffff;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+      /* Form inputs focus state */
+      input:focus, select:focus {
+        outline: none;
+        border-color: #1e40af;
+        ring: 2px;
+        box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <header
+      id="navbar"
+      class="glass-effect fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-slate-200"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a
+            href="index.html"
+            class="text-2xl font-bold text-slate-800 hover:text-accent transition-colors flex items-center"
+          >
+            <div class="w-10 h-10 rounded-lg logo-badge flex items-center justify-center mr-3">
+              <span class="text-white font-bold text-lg">SFO</span>
+            </div>
+            SSB Future Officers
+          </a>
+          <nav class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="text-accent font-semibold border-b-2 border-accent pb-1">Home</a>
+            <a href="about.html" class="text-slate-600 hover:text-accent transition-colors font-medium">About</a>
+            <a href="#products" class="text-slate-600 hover:text-accent transition-colors font-medium">Products</a>
+            <a href="#testimonials" class="text-slate-600 hover:text-accent transition-colors font-medium">Success Stories</a>
+            <a href="contact.html" class="text-slate-600 hover:text-accent transition-colors font-medium">Contact</a>
+          </nav>
+          <button
+            id="mobile-menu-button"
+            class="md:hidden text-slate-600 hover:text-accent focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="md:hidden bg-white transform -translate-x-full absolute top-full left-0 w-full border-b border-slate-200 shadow-lg"
+      >
+        <nav class="flex flex-col p-4 space-y-1">
+          <a
+            href="index.html"
+            class="mobile-nav-link text-slate-700 hover:bg-blue-50 hover:text-accent rounded-md px-3 py-3 font-medium"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="mobile-nav-link text-slate-700 hover:bg-blue-50 hover:text-accent rounded-md px-3 py-3 font-medium"
+            >About</a
+          >
+          <a
+            href="#products"
+            class="mobile-nav-link text-slate-700 hover:bg-blue-50 hover:text-accent rounded-md px-3 py-3 font-medium"
+            >Products</a
+          >
+          <a
+            href="#testimonials"
+            class="mobile-nav-link text-slate-700 hover:bg-blue-50 hover:text-accent rounded-md px-3 py-3 font-medium"
+            >Success Stories</a
+          >
+          <a
+            href="contact.html"
+            class="mobile-nav-link text-slate-700 hover:bg-blue-50 hover:text-accent rounded-md px-3 py-3 font-medium"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+      <section id="home" class="py-12 md:py-20 text-center hero-gradient rounded-3xl mb-16 px-6">
+        <h1
+          class="text-4xl md:text-6xl font-extrabold text-slate-800 leading-tight"
+        >
+          Elite SSB Preparation <span class="gradient-text">Materials</span>
+        </h1>
+        <p class="mt-6 text-lg text-slate-600 max-w-3xl mx-auto">
+          Professional-grade SSB preparation resources designed by former assessors and successful officers. 
+          Transform your preparation with battle-tested materials used by India's finest.
+        </p>
+        <div class="mt-10">
+          <a
+            href="#products"
+            class="military-gradient text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-900 transition-all shadow-lg hover:shadow-xl"
+            >
+            Explore Premium Materials
+          </a>
+        </div>
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div class="text-center p-6">
+            <div class="text-3xl font-bold text-accent mb-2">12+</div>
+            <div class="text-slate-600">Years of Excellence</div>
+          </div>
+          <div class="text-center p-6">
+            <div class="text-3xl font-bold text-accent mb-2">200+</div>
+            <div class="text-slate-600">Professional Images</div>
+          </div>
+          <div class="text-center p-6">
+            <div class="text-3xl font-bold text-accent mb-2">1000+</div>
+            <div class="text-slate-600">Practice Scenarios</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-16 relative w-full max-w-6xl mx-auto rounded-xl overflow-hidden shadow-2xl">
+        <div id="hero-carousel" class="relative w-full aspect-[16/9] md:aspect-[21/9] bg-slate-900">
+            <div class="carousel-slide active absolute inset-0 w-full h-full">
+                <img src="https://hindi.cdn.zeenews.com/hindi/sites/default/files/2024/11/22/3433108-indian-army-4.jpg" class="w-full h-full object-cover opacity-80" alt="Indian Armed Forces Parade">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center pb-12">
+                    <h3 class="text-white text-2xl md:text-3xl font-bold tracking-wide">Serving the Nation with Pride</h3>
+                </div>
+            </div>
+            <div class="carousel-slide absolute inset-0 w-full h-full">
+                <img src="https://raksha-anirveda.com/wp-content/uploads/2023/05/Indian-Army-Successfully-Conducts-Major-Training-Exercise-in-Punjab-Along-Western-Borders.webp" class="w-full h-full object-cover opacity-80" alt="Military Training">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center pb-12">
+                    <h3 class="text-white text-2xl md:text-3xl font-bold tracking-wide">Rigorous Training Standards</h3>
+                </div>
+            </div>
+            <div class="carousel-slide absolute inset-0 w-full h-full">
+                <img src="https://shop.ssbcrack.com/cdn/shop/articles/85a5a47ee68ae974e79625026553435a_79a55f64-651d-419a-bb16-1e0b34116159.jpg?v=1751080286&width=1100" class="w-full h-full object-cover opacity-80" alt="Strategic Planning">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center pb-12">
+                    <h3 class="text-white text-2xl md:text-3xl font-bold tracking-wide">Develop Strategic Thinking</h3>
+                </div>
+            </div>
+             <div class="carousel-slide absolute inset-0 w-full h-full">
+                <img src="https://media.licdn.com/dms/image/v2/D4D12AQEnbWZCxWYpxQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1728025653149?e=2147483647&v=beta&t=jAus2xZXLkYG7Nq1UrOqWAFV_xToKbDO6xf3SBSa2R4" class="w-full h-full object-cover opacity-80" alt="Team Coordination">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center pb-12">
+                    <h3 class="text-white text-2xl md:text-3xl font-bold tracking-wide">Master Group Tasks</h3>
+                </div>
+            </div>
+             <div class="carousel-slide absolute inset-0 w-full h-full">
+                <img src="https://images.indianexpress.com/2024/11/indianarmy7593.jpg" class="w-full h-full object-cover opacity-80" alt="Leadership">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center pb-12">
+                    <h3 class="text-white text-2xl md:text-3xl font-bold tracking-wide">Lead with Confidence</h3>
+                </div>
+            </div>
+
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-all active-dot" data-slide="0"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-all" data-slide="1"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-all" data-slide="2"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-all" data-slide="3"></button>
+                <button class="carousel-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-all" data-slide="4"></button>
+            </div>
+        </div>
+      </section>
+
+      <section class="py-16">
+        <h2
+          class="section-header text-3xl font-bold text-slate-800 mb-12 text-center"
+        >
+          Why Choose SSB Future Officers?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-100 card-hover">
+            <div class="w-12 h-12 rounded-full military-gradient flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-4">Expert-Designed Content</h3>
+            <p class="text-slate-600">
+              All materials created by former SSB assessors, military psychologists, 
+              and successful officers who understand exactly what selection boards look for.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-100 card-hover">
+            <div class="w-12 h-12 rounded-full military-gradient flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-4">Comprehensive Coverage</h3>
+            <p class="text-slate-600">
+              Complete preparation suite covering PPDT/TAT, WAT, SRT, and GTO - everything 
+              you need for all psychological tests in one place.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-100 card-hover">
+            <div class="w-12 h-12 rounded-full military-gradient flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-4">Proven Results</h3>
+            <p class="text-slate-600">
+              Trusted by thousands of successful candidates who have secured recommendations 
+              and commissions across all three services.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="ppdt-gallery" class="py-16 testimonial-bg rounded-3xl px-6">
+        <h2
+          class="section-header text-3xl font-bold text-slate-800 mb-4 text-center"
+        >
+          Premium PPDT / TAT Image Collection
+        </h2>
+        <p class="mt-4 text-center text-slate-600 max-w-3xl mx-auto mb-10">
+          Preview our exclusive collection of military-grade PPDT (Picture Perception and Discussion Test) 
+          and TAT (Thematic Apperception Test) images. Professionally designed to challenge and prepare 
+          you for actual SSB assessments.
+        </p>
+
+        <div
+          id="image-grid"
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
+        >
+          </div>
+        <div class="text-center mt-10">
+          <button
+            id="load-more-btn"
+            class="bg-white text-slate-800 font-bold py-3 px-8 rounded-lg hover:bg-slate-50 border border-slate-200 transition-all shadow hover:shadow-md"
+          >
+            Load More Preview Images
+          </button>
+        </div>
+
+        <div class="mt-16 max-w-lg mx-auto">
+          <div
+            class="bg-white rounded-xl p-8 flex flex-col text-center border-t-4 border-accent shadow-lg"
+          >
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 mb-4 mx-auto">
+              <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-3">
+              Complete PPDT/TAT Officer's Kit
+            </h3>
+            <p class="text-slate-600 text-sm mb-6 flex-grow">
+              Premium PDF collection of 200+ professionally designed images for 
+              comprehensive offline preparation. Includes assessment guidelines, scoring parameters, 
+              and expert analysis.
+            </p>
+            <a
+              href="https://pages.razorpay.com/anuj"
+              target="_blank"
+              class="purchase-link mt-auto military-gradient text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition-all"
+              >Get Complete Kit - ₹999</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="py-16">
+        <h2
+          class="section-header text-3xl font-bold text-slate-800 mb-12 text-center"
+        >
+          Complete Officer Preparation Suite
+        </h2>
+        <p class="mt-4 text-center text-slate-600 max-w-3xl mx-auto mb-10">
+          Elevate your preparation with our comprehensive suite of premium materials. 
+          Designed by military psychologists and former SSB panel members.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
+            class="bg-white rounded-xl p-8 flex flex-col text-center border-t-4 border-accent shadow-lg card-hover"
+          >
+            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4 mx-auto">
+              <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">
+              WAT Officer's Manual
+            </h3>
+            <p class="text-slate-600 text-sm mb-4 flex-grow">
+              Complete collection of 1200+ word associations across 20 curated sets. 
+              Includes response analysis, scoring methodology, and cognitive development exercises.
+            </p>
+            <div class="mt-4 mb-6">
+              <span class="text-2xl font-bold text-slate-800">₹799</span>
+              <span class="text-slate-500 text-sm line-through ml-2">₹1299</span>
+            </div>
+            <a
+              href="https://pages.razorpay.com/anuj"
+              target="_blank"
+              class="purchase-link mt-auto military-gradient text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition-all"
+              >Get WAT Manual</a
+            >
+          </div>
+          <div
+            class="bg-white rounded-xl p-8 flex flex-col text-center border-t-4 border-accent shadow-lg card-hover"
+          >
+            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4 mx-auto">
+              <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">
+              SRT Command Workbook
+            </h3>
+            <p class="text-slate-600 text-sm mb-4 flex-grow">
+              Comprehensive guide with 1200+ leadership scenarios and officer-like responses. 
+              Develop decision-making frameworks and command thinking patterns.
+            </p>
+            <div class="mt-4 mb-6">
+              <span class="text-2xl font-bold text-slate-800">₹899</span>
+              <span class="text-slate-500 text-sm line-through ml-2">₹1499</span>
+            </div>
+            <a
+              href="https://pages.razorpay.com/anuj"
+              target="_blank"
+              class="purchase-link mt-auto military-gradient text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition-all"
+              >Get SRT Workbook</a
+            >
+          </div>
+
+          <div
+            class="bg-white rounded-xl p-8 flex flex-col text-center border-t-4 border-accent shadow-lg card-hover"
+          >
+            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4 mx-auto">
+              <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Master Psychological Tests</h3>
+            <p class="text-slate-600 text-sm mb-4 flex-grow">
+              Comprehensive mastery of TAT, WAT, SRT, and Self Description. Learn to project 
+              officer-like qualities through your subconscious responses with expert guidance.
+            </p>
+            <div class="mt-4 mb-6">
+              <span class="text-2xl font-bold text-slate-800">₹1299</span>
+              <span class="text-slate-500 text-sm line-through ml-2">₹1999</span>
+            </div>
+            <a
+              href="https://pages.razorpay.com/anuj"
+              target="_blank"
+              class="purchase-link mt-auto military-gradient text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-900 transition-all"
+              >Get Psychology Guide</a
+            >
+          </div>
+        </div>
+
+        <div class="mt-16 max-w-2xl mx-auto">
+          <div
+            class="bg-gradient-to-r from-blue-900 to-blue-700 rounded-xl p-8 text-center shadow-xl"
+          >
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 mb-4 mx-auto">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">
+              Complete Preparation Bundle
+            </h3>
+            <p class="text-blue-100 text-sm mb-4">
+              Get all four products (PPDT/TAT Kit, WAT Manual, SRT Workbook, Psychological Guide) 
+              at a special discounted price. Save ₹1000+ with this complete package.
+            </p>
+            <div class="mt-4 mb-6">
+              <span class="text-3xl font-bold text-white">₹2999</span>
+              <span class="text-blue-300 text-lg line-through ml-2">₹3996</span>
+              <span class="ml-4 bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full">Save ₹997</span>
+            </div>
+            <a
+              href="https://pages.razorpay.com/anuj"
+              target="_blank"
+              class="purchase-link mt-auto bg-white text-blue-900 font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl"
+              >Get Complete Bundle</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="py-16 testimonial-bg rounded-3xl px-6 mt-8">
+        <h2 class="section-header text-3xl font-bold text-slate-800 mb-12 text-center">
+          Officer Success Stories
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full military-gradient flex items-center justify-center mr-4">
+                <span class="text-white font-bold">CD</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-800">Capt. Dev Malhotra</h4>
+                <p class="text-sm text-slate-600">Indian Army, 2018</p>
+              </div>
+            </div>
+            <p class="text-slate-600 italic">"The PPDT image collection was incredibly realistic. Practicing with SSB Future Officers materials gave me the confidence to perform well in the actual test. Highly recommended!"</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full military-gradient flex items-center justify-center mr-4">
+                <span class="text-white font-bold">FC</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-800">Flight Lt. Chitra Sharma</h4>
+                <p class="text-sm text-slate-600">Indian Air Force, 2020</p>
+              </div>
+            </div>
+            <p class="text-slate-600 italic">"The comprehensive WAT and SRT materials helped me develop quick, officer-like thinking. The quality of content is unmatched by any other preparation resource I've seen."</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full military-gradient flex items-center justify-center mr-4">
+                <span class="text-white font-bold">Lt</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-800">Lt. Arjun Singh</h4>
+                <p class="text-sm text-slate-600">Indian Navy, 2022</p>
+              </div>
+            </div>
+            <p class="text-slate-600 italic">"As a repeat candidate, SSB Future Officers made the difference. The structured materials and expert insights helped me identify and correct my weaknesses. Worth every rupee!"</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 mt-8 text-center">
+        <div class="military-gradient rounded-3xl p-12">
+          <h2 class="text-3xl font-bold text-white mb-6">
+            Begin Your Officer Journey Today
+          </h2>
+          <p class="text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of successful candidates who transformed their SSB preparation 
+            with our elite materials. Your commission awaits.
+          </p>
+          <a
+            href="#products"
+            class="bg-white text-blue-900 font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl"
+            >
+            Explore Premium Materials
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white mt-16 border-t border-slate-200">
+      <div class="container mx-auto px-6 py-8">
+        <div class="text-center">
+          <a
+            href="index.html"
+            class="text-xl font-bold text-slate-800 hover:text-accent transition-colors flex items-center justify-center"
+          >
+            <div class="w-10 h-10 rounded-lg logo-badge flex items-center justify-center mr-3">
+              <span class="text-white font-bold text-lg">SFO</span>
+            </div>
+            SSB Future Officers
+          </a>
+          <p class="mt-4 text-slate-600">
+            Elite Preparation for India's Future Military Leaders
+          </p>
+          <!-- <p class="text-sm text-slate-500 mt-2">
+            <a href="mailto:support@futureofficers.com" class="hover:text-accent text-accent font-medium"
+              >support@futureofficers.com</a
+            >
+          </p> -->
+        </div>
+        <div class="mt-6 flex flex-wrap justify-center space-x-6 text-slate-600 text-sm">
+          <a href="terms.html" class="hover:text-accent font-medium">Terms & Conditions</a>
+          <a href="license.html" class="hover:text-accent font-medium">License</a>
+          <a href="privacy.html" class="hover:text-accent font-medium">Privacy Policy</a>
+          <a href="about.html" class="hover:text-accent font-medium">About us</a>
+          <a href="contact.html" class="hover:text-accent font-medium">Contact</a>
+        </div>
+        <div
+          class="mt-8 pt-6 border-t border-slate-200 text-center text-slate-500"
+        >
+          <p class="text-sm">&copy; 2012-2026 SSB Future Officers. All Rights Reserved.</p>
+          <p class="text-xs mt-2">
+            This is an independent preparation resource and is not affiliated with any government organization.
+          </p>
+          <p class="text-xs mt-1">Developing Future Officers Since 2012</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="registration-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[100] hidden">
+        <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button id="close-reg-btn" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h3 class="text-2xl font-bold text-slate-800 mb-2">Candidate Registration</h3>
+            <p class="text-sm text-slate-500 mb-6">Please provide your details to proceed with the download.</p>
+            
+            <form id="reg-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+                    <input type="text" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
+                    <input type="tel" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+                    <input type="email" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Entry Type</label>
+                        <select required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+                            <option value="">Select...</option>
+                            <option value="NDA">NDA</option>
+                            <option value="CDS">CDS</option>
+                            <option value="AFCAT">AFCAT</option>
+                            <option value="TGC/SSC">TGC/SSC</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Roll No.</label>
+                        <input type="text" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">City</label>
+                        <input type="text" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Date of SSB</label>
+                        <input type="date" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+                    </div>
+                </div>
+                
+                <button type="submit" class="w-full military-gradient text-white font-bold py-3 rounded-lg hover:bg-blue-900 transition-all shadow-md mt-2">
+                    Submit & Proceed
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div
+      id="redirect-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[100] hidden"
+    >
+      <div class="bg-white rounded-xl p-8 max-w-sm mx-auto text-center shadow-2xl">
+        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4 mx-auto">
+          <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-800 mb-4">Secure Payment Gateway</h3>
+        <p class="text-slate-600 mb-6">
+          You are being redirected to our secure payment partner's platform to
+          complete your purchase. Do you want to proceed?
+        </p>
+        <div class="flex justify-center space-x-4">
+          <button
+            id="cancel-redirect-btn"
+            class="bg-slate-200 text-slate-800 font-bold py-2 px-6 rounded-lg hover:bg-slate-300 transition-all"
+          >
+            Cancel
+          </button>
+          <a
+            id="confirm-redirect-btn"
+            href="#"
+            target="_blank"
+            class="military-gradient text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-900 transition-all"
+            >Proceed to Payment</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="loader-overlay" class="fixed inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center z-[110] hidden">
+        <div class="spinner mb-4"></div>
+        <p id="loader-text" class="text-white font-bold text-xl tracking-wide animate-pulse">Processing Registration...</p>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // --- Mobile Menu Script ---
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("-translate-x-full");
+          });
+          document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+            link.addEventListener("click", () => {
+              mobileMenu.classList.add("-translate-x-full");
+            });
+          });
+        }
+
+        // --- Featured Image Carousel Script ---
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        let currentSlide = 0;
+        const slideInterval = 5000;
+        let autoPlayTimer;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => {
+                dot.classList.remove('opacity-100', 'scale-125');
+                dot.classList.add('opacity-50');
+            });
+            slides[index].classList.add('active');
+            dots[index].classList.remove('opacity-50');
+            dots[index].classList.add('opacity-100', 'scale-125');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function startAutoPlay() {
+            autoPlayTimer = setInterval(nextSlide, slideInterval);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayTimer);
+        }
+
+        if (slides.length > 0) {
+            showSlide(currentSlide);
+            startAutoPlay();
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    stopAutoPlay();
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                    startAutoPlay();
+                });
+            });
+        }
+
+        // --- PPDT Image Gallery Script ---
+        const imageGrid = document.getElementById("image-grid");
+        const loadMoreBtn = document.getElementById("load-more-btn");
+        
+        if (imageGrid && loadMoreBtn) {
+          const TOTAL_IMAGES = 144;
+          const LOAD_BATCH_SIZE = 20; 
+          const BASE_URL = "https://pub-90f1278f2a1d419e9469b9828b225dd5.r2.dev/image/";
+          let loadedCount = 0;
+          let imageIndices = Array.from({ length: TOTAL_IMAGES }, (_, i) => i + 1);
+
+          // Shuffle
+          for (let i = imageIndices.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [imageIndices[i], imageIndices[j]] = [imageIndices[j], imageIndices[i]];
+          }
+
+          function padNumber(num, length = 3) {
+            return String(num).padStart(length, "0");
+          }
+
+          function createImageElement(index) {
+            const imgContainer = document.createElement("div");
+            imgContainer.className = "relative overflow-hidden rounded-lg bg-white border border-slate-200 shadow-sm transition-all duration-300";
+            imgContainer.addEventListener("contextmenu", (e) => e.preventDefault());
+            const img = document.createElement("img");
+            img.src = `${BASE_URL}tat${padNumber(index)}.jpg`;
+            img.alt = `PPDT/TAT Image ${index}`;
+            img.className = "w-full h-48 object-cover";
+            img.loading = "lazy";
+            imgContainer.appendChild(img);
+            return imgContainer;
+          }
+
+          function loadNextBatch() {
+            const nextBatch = imageIndices.slice(loadedCount, loadedCount + LOAD_BATCH_SIZE);
+            nextBatch.forEach(imgIndex => {
+                imageGrid.appendChild(createImageElement(imgIndex));
+            });
+            loadedCount += nextBatch.length;
+            if (loadedCount >= TOTAL_IMAGES) {
+              loadMoreBtn.style.display = "none";
+            }
+          }
+          loadNextBatch();
+          loadMoreBtn.addEventListener("click", loadNextBatch);
+        }
+
+        // --- Payment Registration Workflow Script ---
+        
+        // Modals & Elements
+        const registrationModal = document.getElementById("registration-modal");
+        const redirectModal = document.getElementById("redirect-modal");
+        const loaderOverlay = document.getElementById("loader-overlay");
+        const loaderText = document.getElementById("loader-text");
+        
+        // Buttons
+        const purchaseLinks = document.querySelectorAll(".purchase-link");
+        const closeRegBtn = document.getElementById("close-reg-btn");
+        const cancelRedirectBtn = document.getElementById("cancel-redirect-btn");
+        const confirmRedirectBtn = document.getElementById("confirm-redirect-btn");
+        
+        // Form
+        const regForm = document.getElementById("reg-form");
+        
+        let targetPaymentUrl = "";
+
+        // 1. Intercept Purchase Clicks
+        if (purchaseLinks) {
+            purchaseLinks.forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    targetPaymentUrl = this.href;
+                    registrationModal.classList.remove("hidden");
+                });
+            });
+        }
+
+        // 2. Handle Registration Form Submit
+        if (regForm) {
+            regForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                // Close Reg Modal
+                registrationModal.classList.add("hidden");
+                
+                // Show Processing Loader
+                loaderText.innerText = "Processing Registration Details...";
+                loaderOverlay.classList.remove("hidden");
+
+                // Simulate Server Delay (5 seconds)
+                setTimeout(() => {
+                    loaderOverlay.classList.add("hidden");
+                    
+                    // Setup Redirect Modal
+                    confirmRedirectBtn.href = targetPaymentUrl;
+                    redirectModal.classList.remove("hidden");
+                    
+                    // Reset Form for next time
+                    regForm.reset();
+                }, 5000);
+            });
+        }
+
+        // 3. Handle Proceed to Payment (Continuous Loading)
+        if (confirmRedirectBtn) {
+            confirmRedirectBtn.addEventListener("click", function () {
+                // Hide the confirm modal
+                redirectModal.classList.add("hidden");
+                
+                // Show Persistent Loader
+                loaderText.innerText = "Processing...";
+                loaderOverlay.classList.remove("hidden");
+                // Note: The loader stays indefinitely as the user goes to new tab
+            });
+        }
+
+        // Close Buttons Logic
+        if (closeRegBtn) {
+            closeRegBtn.addEventListener("click", () => {
+                registrationModal.classList.add("hidden");
+            });
+        }
+        
+        if (cancelRedirectBtn) {
+            cancelRedirectBtn.addEventListener("click", () => {
+                redirectModal.classList.add("hidden");
+            });
+        }
+
+        // Click outside to close (Optional - tailored for UX)
+        window.addEventListener("click", function (event) {
+            if (event.target === registrationModal) {
+                registrationModal.classList.add("hidden");
+            }
+            if (event.target === redirectModal) {
+                redirectModal.classList.add("hidden");
+            }
+        });
+
+      });
+    </script>
+  </body>
+</html>
